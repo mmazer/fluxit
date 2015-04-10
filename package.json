@@ -1,0 +1,22 @@
+{
+  "name": "fluxit",
+  "version": "1.0.0",
+  "description": "A Flux implementation for use with React",
+  "main": "lib/fluxit.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Marc Mazer <marc.mazer@allstream.com>",
+  "license": "NONE",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "gulp": "^3.8.11",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.4",
+    "gulp-mocha": "^2.0.0",
+    "gulp-rm": "^1.0.0",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "^2.2.1",
+    "sinon": "^1.14.1"
+  }
+}
