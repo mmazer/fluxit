@@ -43,17 +43,17 @@ describe('store', function() {
     });
   });
 
-  describe('bindAction', function() {
+  describe('onAction', function() {
 
     it('should add the action handler for the specified type', function() {
       var s = new Store({}, dispatcher);
       var f = function() {};
-      s.bindAction('test', f);
+      s.onAction('test', f);
       expect(s._actions).to.deep.equal({test: f});
     });
     it('should return the store for chaining', function() {
       var s = new Store({}, dispatcher);
-      expect(s.bindAction('test', function(){})).to.equal(s);
+      expect(s.onAction('test', function(){})).to.equal(s);
     });
 
   });
@@ -78,7 +78,7 @@ describe('store', function() {
     it('should call the handler for the specified action', function() {
       var s = new Store();
       var spy = sinon.spy();
-      s.bindAction('test', spy);
+      s.onAction('test', spy);
       var a = {type: 'test'};
       s.handleAction(a);
       expect(spy.called).to.be.true;
