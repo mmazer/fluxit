@@ -1,5 +1,5 @@
 {
-  "name": "fluxit",
+  "name": "react-fluxit",
   "version": "0.1.0",
   "description": "A Flux implementation for use with React",
   "main": "lib/fluxit.js",
