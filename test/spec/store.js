@@ -28,12 +28,9 @@ describe('store', function() {
     });
 
     it('should call the default initialize method', function() {
-      var actions = {
-        typeA: function() {},
-        typeB: function() {}
-      };
-      var s = new Store({actions: actions}, dispatcher);
-      expect(s._actions).to.deep.equal(actions);
+      var opts = {};
+      var s = new Store(opts, dispatcher);
+      expect(s._options).to.deep.equal(opts);
     });
 
     it('should register the store with the dispatcher', function() {
@@ -49,7 +46,7 @@ describe('store', function() {
       var s = new Store({}, dispatcher);
       var f = function() {};
       s.onAction('test', f);
-      expect(s._actions).to.deep.equal({test: f});
+      expect(s.actions).to.deep.equal({test: f});
     });
     it('should return the store for chaining', function() {
       var s = new Store({}, dispatcher);

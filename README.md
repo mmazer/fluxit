@@ -96,10 +96,18 @@ call `onAction` to register action callbacks:
                 // ... perform store specific initialization
                 this.onAction('ACTION_TYPE, 'handleAction')
                 .onAction('SOME_OTHER_ACTION_TYPE', 'handleSomeOtherAction')
+                // or use a map
+                this.onAction({
+                  'ACTION_TYPE': 'handleAction',
+                  'SOME_OTHER_ACTION':  'handleSomeOtherAction'
+                });
             },
             handleAction: function(action) {
                 // update store state based on action and notifiy listeners of change
                 this.sendChange();
+            },
+            handleSomeOtherAction: function(action) {
+                // ...
             }
         );
 
