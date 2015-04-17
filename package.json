@@ -1,12 +1,16 @@
 {
   "name": "fluxit",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Flux implementation for use with React",
   "main": "lib/fluxit.js",
   "scripts": {
     "test": "gulp test"
   },
-  "author": "Marc Mazer <marc.mazer@allstream.com>",
+  "author": "Marc Mazer <cramrezam@gmail.com>",
+ "repository": {
+    "type": "git",
+    "url": "https://github.com/mmazer/fluxit.git"
+  },
   "license": "NONE",
   "devDependencies": {
     "chai": "^2.2.0",
