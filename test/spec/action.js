@@ -82,4 +82,12 @@ describe('action', function() {
     });
  });
 
+ describe('setDispatcher', function() {
+  it('should set the default action dispatcher', function() {
+    var d = {};
+    api.setDispatcher(d);
+  });
+
+ });
+
 });
